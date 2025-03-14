@@ -7,7 +7,4 @@ def change(num):
   swap = num_to_str[2] + num_to_str[1] + num_to_str[0]
   return int(swap)
 
-if change(a)>change(b):
-  print(change(a))
-else:
-  print(change(b))
+print(max(change(a), change(b)))
