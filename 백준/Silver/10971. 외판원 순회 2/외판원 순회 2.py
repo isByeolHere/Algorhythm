@@ -1,8 +1,12 @@
+
 # 외판원 순회
 import sys
 
 def travel(cnt, start, now, cost):
   global min_price
+
+  if min_price <= cost:
+    return
 
   if cnt == n and city[now][start] :
       cost += city[now][start]
