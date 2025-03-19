@@ -1,4 +1,3 @@
-
 # 외판원 순회
 import sys
 
@@ -22,9 +21,7 @@ city = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
 visited = [False] * n
 min_price = sys.maxsize
 
-for i in range(n):
-    visited[i] = True
-    travel(1, i, i, 0)
-    visited[i] = False
+visited[0] = 1
+travel(1, 0, 0, 0)
 
 print(min_price)
