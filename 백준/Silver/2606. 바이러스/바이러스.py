@@ -23,13 +23,6 @@ for i in range(edge):
   graph[a].append(b)
   graph[b].append(a)
 
-# for i in range(1, com+1):
-#   if not visited[i]:
+
 bfs(1)
-
-cnt=0
-for i in visited:
-  if i == True:
-    cnt+=1
-
-print(cnt-1)
+print(visited.count(True)-1)
