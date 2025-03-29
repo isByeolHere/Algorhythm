@@ -1,11 +1,11 @@
 import sys
 input = sys.stdin.readline
 
-def bfs(start):
+def dfs(start):
   visited[start] = True
   for i in graph[start]:
     if not visited[i]:
-      bfs(i)
+      dfs(i)
 
 com = int(input())
 edge = int(input())
@@ -17,5 +17,5 @@ for i in range(edge):
   graph[a].append(b)
   graph[b].append(a)
 
-bfs(1)
+dfs(1)
 print(visited.count(True)-1)
